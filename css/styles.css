@@ -1,0 +1,25 @@
+.header {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: darkgrey;
+    margin-bottom: 20px;
+}
+
+    .header span {
+        float: right;
+    }
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.btn-delete {
+    width: 100%;
+}
+
+#add-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
