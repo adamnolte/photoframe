@@ -1,6 +1,8 @@
 app.controller('photoFrameController', function($scope, $http) {
 
     $scope.photos=[];
+    $scope.showMenu = false;
+    $scope.showDelete = false;
     
     $scope.loadPhotos = function(){
         $http({
@@ -24,5 +26,17 @@ app.controller('photoFrameController', function($scope, $http) {
                 console.log("Error Deleting File");
             }
         });
-    };
+    }
+    
+    $scope.powerOff = function() {
+        console.log("poweroff");
+    }
+    
+    $scope.toggleMenu = function() {
+        $scope.showMenu = !$scope.showMenu;
+    }
+    
+    $scope.toggleDelete = function() {
+        $scope.showDelete = !$scope.showDelete;
+    }
 });
