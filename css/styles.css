@@ -1,4 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 button {
+    border-radius: 50%;
+    border: none;
+    outline: none !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -6,8 +14,11 @@ button {
 .header {
     font-size: 40px;
     font-weight: bold;
-    background-color: darkgrey;
+    background-color: #3F51B5;
     margin-bottom: 20px;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
 }
 
     .header span {
@@ -20,8 +31,24 @@ img {
 }
 
 .btn-delete {
-    width: 100%;
+    color: #fff;
+    background-color: #FF4081;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    transition: 1s;
+    -webkit-transition: 1s;
 }
+
+    .btn-delete.hide-delete {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .btn-delete.show-delete {
+        visibility: visible;
+        opacity: 1;
+    }
 
 #menu-options {
     position: fixed;
@@ -31,18 +58,62 @@ img {
     color: #fff;
 }
 
-    #menu-options button {
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        border: none;
-        outline: none !important;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        background-color: #E91E63;
+    #menu-options .menu-wrapper {
+        position: relative;
     }
 
+    #menu-options button {
+        height: 50px;
+        width: 50px;
+        background-color: #3F51B5;
+    }
+    
+    #menu-options .menu-breakout {
+        position: absolute;
+        bottom: 50px;
+        z-index: -100;
+    }
         #menu-options .menu-breakout button {
             display: block;
+            position: relative;
             margin-bottom: 10px;
-            background-color: #337ab7;
+            background-color: #FF4081;
         }
+    
+        #menu-options .menu-breakout .add-photo-btn.show-menu {
+            bottom: 0;
+            -webkit-transition: 1s;
+            transition: 1s ease;
+        }
+        
+        #menu-options .menu-breakout .add-photo-btn.hide-menu {
+            bottom:-275px;
+            -webkit-transition: 1s;
+            transition: 1.5s ease;
+        }
+        
+        #menu-options .menu-breakout .delete-photo-btn.show-menu {
+            bottom: 0;
+            -webkit-transition: 1.1s;
+            transition: 1.25s ease;
+        }
+        
+        #menu-options .menu-breakout .delete-photo-btn.hide-menu {
+            bottom:-275px;
+            -webkit-transition: 1s;
+            transition: 1.25s ease;
+        }
+        
+        #menu-options .menu-breakout .power-off-btn.show-menu {
+            bottom: 0;
+            -webkit-transition: 1.2s;
+            transition: 1.5s ease;
+        }
+        
+        #menu-options .menu-breakout .power-off-btn.hide-menu {
+            bottom:-275px;
+            -webkit-transition: 1s;
+            transition: 1s ease;
+        }
+
+        
