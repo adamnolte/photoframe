@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Photo Frame</title>
 
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
@@ -19,14 +19,16 @@
 </head>
 <body>
 <div class="container-fluid" ng-app="myApp" ng-controller="photoFrameController" ng-cloak>
-    <div class="row">
-        <div class="col-xs-12 header">
+    <div class="row header">
+        <div class="col-xs-12 col-sm-7">
             Photo Frame Gallery
-            <span>{{photos.length}} Images</span>
+        </div>
+        <div class="col-xs-12 col-sm-5 header-right">
+            {{photos.length}} Images
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-md-3" ng-repeat="photo in photos">
+        <div class="col-xs-12 col-sm-4 col-md-3" ng-repeat="photo in photos">
             <img ng-src="../photos/{{photo}}" alt="photo" />
             <button class="btn-delete" ng-class="showDelete ? 'show-delete' : 'hide-delete'" ng-click="deletePhoto(photo)"><i class="fa fa-minus" aria-hidden="true"></i></button>
         </div>
