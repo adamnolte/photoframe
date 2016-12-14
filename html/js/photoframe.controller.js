@@ -29,12 +29,17 @@ app.controller('photoFrameController', function($scope, $http, $uibModal) {
     };
     
     $scope.openPhotoModal = function(){
+        $scope.showDelete = false;
         var modalInstance = $uibModal.open({
           animation: true,
           ariaLabelledBy: 'modal-title',
           ariaDescribedBy: 'modal-body',
           templateUrl: 'photomodal.html',
           controller: 'uploadPhotoController',
+        });
+        
+        modalInstance.result.then(function (newPhoto) {
+            $scope.photos.push(newPhoto);
         });
     };
     

@@ -8,7 +8,7 @@ app.controller('uploadPhotoController', function($scope, $http, $uibModalInstanc
             url: 'php/addphoto.php',
             data: $scope.croppedImage
         }).success(function (data) {
-            $uibModalInstance.close();
+            $uibModalInstance.close(data);
         });
     }
 
