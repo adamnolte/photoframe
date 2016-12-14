@@ -1,1 +1,1 @@
-var app = angular.module("myApp", []);
+var app = angular.module("myApp", ["ngFileUpload","angular-img-cropper","ui.bootstrap"]);

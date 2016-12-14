@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-button {
+#menu-options button, .btn-delete {
     border-radius: 50%;
     border: none;
     outline: none !important;
@@ -24,7 +24,7 @@ button {
         text-align: right;
     }
 
-img {
+img.gal-photo {
     height: auto;
     width: 100%;
 }
@@ -119,6 +119,12 @@ img {
             -webkit-transition: .75s ease-in;
             transition: .75s ease-in;
         }
+        
+.cropArea {
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+}
 
 /* Mobile Styles */
 @media (max-width: 768px){

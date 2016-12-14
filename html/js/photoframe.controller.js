@@ -1,4 +1,4 @@
-app.controller('photoFrameController', function($scope, $http) {
+app.controller('photoFrameController', function($scope, $http, $uibModal) {
 
     $scope.photos=[];
     $scope.showMenu = false;
@@ -7,7 +7,7 @@ app.controller('photoFrameController', function($scope, $http) {
     $scope.loadPhotos = function(){
         $http({
             method: 'GET', 
-            url: '../php/getphotos.php'
+            url: 'php/getphotos.php'
         }).success(function(data) {
            $scope.photos = data;
         });
@@ -17,7 +17,7 @@ app.controller('photoFrameController', function($scope, $http) {
         $http({
             method: 'POST',
             data: photo,
-            url: '../php/deletephoto.php'
+            url: 'php/deletephoto.php'
         }).success(function(data) {
             if(data === "Success") {
                 $scope.photos.splice( $scope.photos.indexOf(photo), 1);
@@ -26,21 +26,27 @@ app.controller('photoFrameController', function($scope, $http) {
                 console.log("Error Deleting File");
             }
         });
-    }
+    };
     
-    $scope.uploadPhoto = function(){
-        console.log("uploading");
-    }
+    $scope.openPhotoModal = function(){
+        var modalInstance = $uibModal.open({
+          animation: true,
+          ariaLabelledBy: 'modal-title',
+          ariaDescribedBy: 'modal-body',
+          templateUrl: 'photomodal.html',
+          controller: 'uploadPhotoController',
+        });
+    };
     
     $scope.powerOff = function() {
         console.log("poweroff");
-    }
+    };
     
     $scope.toggleMenu = function() {
         $scope.showMenu = !$scope.showMenu;
-    }
+    };
     
     $scope.toggleDelete = function() {
         $scope.showDelete = !$scope.showDelete;
-    }
+    };
 });
