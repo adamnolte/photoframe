@@ -49,6 +49,7 @@ button {
     right: 20px;
     height: 30px;
     width: 30px;
+    padding: 0 0;
     line-height: 30px;
     font-size: 20px;
     -webkit-transition: 1s;
@@ -86,6 +87,8 @@ button {
     #menu-options button {
         height: 50px;
         width: 50px;
+        text-align: center;
+        padding: 0 0;
     }
     
     #menu-options .menu-breakout {
