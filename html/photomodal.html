@@ -6,6 +6,9 @@
     <div>
       <canvas width="300" height="300" id="canvas" image-cropper image="picFile | ngfDataUrl" cropped-image="croppedImage" crop-width="800" crop-height="1280" min-width="400" min-height="640" keep-aspect="true"></canvas>
     </div>
+    <div class="loading-pic" ng-show="loading">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+    </div>
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" type="button" ng-click="upload()">Upload</button>

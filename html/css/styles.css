@@ -122,15 +122,17 @@ img.gal-photo {
             -webkit-transition: .75s ease-in;
             transition: .75s ease-in;
         }
-        
-.cropArea {
-    overflow: hidden;
-    width: 500px;
-    height: 350px;
-}
 
+/* Modal */
 .modal-dialog {
     width: 350px;
+}
+
+.loading-pic {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: calc(50% - 27px);
 }
 
 /* Mobile Styles */
