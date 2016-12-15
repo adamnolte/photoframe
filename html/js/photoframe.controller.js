@@ -23,7 +23,7 @@ app.controller('photoFrameController', function($scope, $http, $uibModal) {
                 $scope.photos.splice( $scope.photos.indexOf(photo), 1);
             }
             else {
-                console.log("Error Deleting File");
+                console.log('Deleting File');
             }
         });
     };
@@ -44,7 +44,19 @@ app.controller('photoFrameController', function($scope, $http, $uibModal) {
     };
     
     $scope.powerOff = function() {
-        console.log("poweroff");
+        var modalInstance = $uibModal.open({
+          animation: true,
+          ariaLabelledBy: 'modal-title',
+          ariaDescribedBy: 'modal-body',
+          templateUrl: 'powermodal.html',
+          controller: 'powerController',
+        });
+        
+        modalInstance.result.then(function (newPhoto) {
+            $scope.photos.push(newPhoto);
+        });
+        
+        
     };
     
     $scope.toggleMenu = function() {
