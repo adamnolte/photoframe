@@ -4,6 +4,10 @@ app.controller('photoFrameController', function($scope, $http, $uibModal) {
     $scope.showMenu = false;
     $scope.showDelete = false;
     
+    $scope.add = function() {
+        $scope.photos.push("2016-12-14-08:38:42-img.png");
+    }
+    
     $scope.loadPhotos = function(){
         $http({
             method: 'GET', 

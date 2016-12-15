@@ -27,7 +27,7 @@ button {
         text-align: right;
     }
 
-img.gal-photo {
+.gal-photo {
     height: auto;
     width: 100%;
     margin-bottom: 10px;
@@ -135,13 +135,6 @@ img.gal-photo {
     width: 330px;
 }
 
-.loading-pic {
-    position: absolute;
-    color: white;
-    top: 50%;
-    left: calc(50% - 27px);
-}
-
 .btn-modal {
     padding: 6px 12px;
     font-size: 14px;
@@ -157,6 +150,27 @@ img.gal-photo {
 .btn-modal.btn-pink {
     margin-right: 5px;
 }
+
+/* Photo Modal */
+.modal-wrapper {
+    position: relative;
+}
+
+    .modal-wrapper .loading-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba(0,0,0,0.6);
+    }
+    
+    .modal-wrapper .loading-pic {
+        position: absolute;
+        font-size: 40px;
+        color: white;
+        top: calc(50% - 60px);
+        left: calc(50% - 77px);
+    }
 
 /* Mobile Styles */
 @media (max-width: 768px){
