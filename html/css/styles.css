@@ -30,6 +30,7 @@ button {
 img.gal-photo {
     height: auto;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .btn-pink {
