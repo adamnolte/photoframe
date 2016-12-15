@@ -52,10 +52,6 @@ app.controller('photoFrameController', function($scope, $http, $uibModal) {
           controller: 'powerController',
         });
         
-        modalInstance.result.then(function (newPhoto) {
-            $scope.photos.push(newPhoto);
-        });
-        
         
     };
     

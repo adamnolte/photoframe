@@ -1,6 +1,6 @@
 <?php
 
-    $output = shell_exec("/opt/vs/bin/tvservice -s");
+    $output = shell_exec("/opt/vc/bin/tvservice -s");
     
     if(strpos($output, "TV is off") !== false) {
         shell_exec("/opt/vc/bin/tvservice -p");
