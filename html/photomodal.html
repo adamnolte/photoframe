@@ -2,7 +2,7 @@
     <h3 class="modal-title" id="modal-title">Upload a new photo</h3>
 </div>
 <div class="modal-body" id="modal-body">
-    <button ngf-select ng-model="picFile" ngf-fix-orientation="true" accept="image/*">Select Image</button>
+    <button class = "btn-img btn-pink btn-modal" ngf-select ng-model="picFile" ngf-fix-orientation="true" accept="image/*">Select Image</button>
     <div>
       <canvas width="300" height="300" id="canvas" image-cropper image="picFile | ngfDataUrl" cropped-image="croppedImage" crop-width="800" crop-height="1280" min-width="400" min-height="640" keep-aspect="true"></canvas>
     </div>
@@ -11,6 +11,6 @@
     </div>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" type="button" ng-click="upload()">Upload</button>
-    <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    <button class="btn-pink btn-modal" type="button" ng-click="upload()">Upload</button>
+    <button class="btn-blue btn-modal" type="button" ng-click="cancel()">Cancel</button>
 </div>

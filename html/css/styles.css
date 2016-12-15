@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#menu-options button, .btn-delete, .modal-body button, .modal-footer button {
+button {
     border: none;
     outline: none !important;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -32,9 +32,17 @@ img.gal-photo {
     width: 100%;
 }
 
-.btn-delete {
+.btn-pink {
     color: #fff;
     background-color: #FF4081;
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #3F51B5;
+}
+
+.btn-delete {
     position: absolute;
     top: 5px;
     right: 20px;
@@ -72,7 +80,6 @@ img.gal-photo {
     #menu-options button {
         height: 50px;
         width: 50px;
-        background-color: #3F51B5;
     }
     
     #menu-options .menu-breakout {
@@ -84,7 +91,6 @@ img.gal-photo {
             display: block;
             position: relative;
             margin-bottom: 10px;
-            background-color: #FF4081;
         }
     
         #menu-options .menu-breakout .add-photo-btn.show-menu {
@@ -125,7 +131,7 @@ img.gal-photo {
 
 /* Modal */
 .modal-dialog {
-    width: 350px;
+    width: 330px;
 }
 
 .loading-pic {
@@ -133,6 +139,22 @@ img.gal-photo {
     color: white;
     top: 50%;
     left: calc(50% - 27px);
+}
+
+.btn-modal {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.btn-img {
+    margin-bottom: 15px;
+}
+
+.btn-modal.btn-pink {
+    margin-right: 5px;
 }
 
 /* Mobile Styles */
