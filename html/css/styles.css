@@ -77,6 +77,11 @@ button {
     #menu-options .menu-wrapper {
         position: relative;
     }
+    
+        #menu-options .menu-wrapper .menu-button {
+            position: relative;
+            z-index: 50;
+        }
 
     #menu-options button {
         height: 50px;
@@ -86,7 +91,6 @@ button {
     #menu-options .menu-breakout {
         position: absolute;
         bottom: 50px;
-        z-index: -100;
     }
         #menu-options .menu-breakout button {
             display: block;
