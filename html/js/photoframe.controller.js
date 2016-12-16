@@ -56,7 +56,6 @@ app.controller('photoFrameController', function($scope, $http, $uibModal) {
           controller: 'powerController',
         });
         
-        
     };
     
     $scope.toggleMenu = function() {

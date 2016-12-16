@@ -15,6 +15,7 @@ app.controller('powerController', function($scope, $http, $uibModalInstance) {
             url: 'php/turnoffsystem.php'
         });
        window.close();
+       $uibModalInstance.close();
     };
     
     $scope.cancel = function () {
