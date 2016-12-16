@@ -139,7 +139,7 @@ button {
 
 /* Modal */
 .modal-dialog {
-    width: 330px;
+    width: 280px;
 }
 
 .btn-modal {
@@ -188,5 +188,9 @@ button {
     
     .header .header-right {
         text-align: center;
+    }
+    
+    .modal-dialog {
+        margin: 5px auto;
     }
 }
